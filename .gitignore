@@ -1,0 +1,25 @@
+/wp-content/themes
+/.vscode
+.idea
+/*.sql
+*.log
+!.gitignore
+!extra-files/
+!wp-content/
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+wp-content/plugins/*
+#!wp-content/plugins/akismet/
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!wp-content/themes/wpgbapi
+wp-content/themes/wpgbapi/vendor/*
+!wp-content/themes/wpgbapi/vendor/autoload.php
+!wp-content/themes/wpgbapi/vendor/bin
+!wp-content/themes/wpgbapi/vendor/composer
