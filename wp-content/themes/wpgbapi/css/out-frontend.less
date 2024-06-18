@@ -1,0 +1,81 @@
+@fonts_main_folder: '/wp-content/themes/wpgbapi/assets/fonts';
+@images_main_folder: '/wp-content/themes/wpgbapi/assets/images';
+
+@import "0-config";
+@import "0-s1x-globals";
+
+:root {
+  --wpbgapi-page-width: @wpbgapi_page_width;
+  --menu-header-height: 70px;
+  @media @1194 {
+    --menu-header-height: 150px;
+  }
+}
+
+div, section, h1, h2, h3, h4, h5, h6, img, a, p, ol, ul, li {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: calc( var(--menu-header-height) + 20px);
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: @col_bg;
+  color: @col1;
+  box-sizing: border-box;
+  font-family: @font_head;
+  font-weight: 400;
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100% !important;
+  }
+  &.main-blur {
+    #site-content,
+    #site-footer,
+    nav.footer-legal {
+      filter: blur(2px);
+      transition: filter .5s linear;
+    }
+  }
+}
+
+/*
+ * Hack for Admin Bar Appeareance
+ */
+body.admin-bar {
+  scroll-padding-top: calc( var(--wp-admin--admin-bar--height) + var(--menu-header-height) );
+  #wpadminbar {
+    position: fixed !important;
+  }
+  #site-header {
+    top: var(--wp-admin--admin-bar--height);
+  }
+  nav#desktop-header-nav ul.sub-menu {
+    top: calc( var(--wp-admin--admin-bar--height) + var(--menu-header-height) );
+  }
+  #mega-header-nav {
+    &.active {
+      top: calc( var(--wp-admin--admin-bar--height) + var(--menu-header-height) );
+    }
+  }
+}
+
+@import "0-ui";
+@import "0-ui-header";
+@import "0-ui-footer";
+
+@import "../blocks/faq-output-full/block";
+@import "../blocks/header/block";
+@import "../blocks/image-showcase-grid/block";
+@import "../blocks/impressum-used-cc-media/block";
+@import "../blocks/post-output-full/block";
+@import "../blocks/post-output-teaser/block";
+@import "../blocks/reference-output-full/block";
+@import "../blocks/reference-output-teaser/block";
+@import "../blocks/service-output-full/block";

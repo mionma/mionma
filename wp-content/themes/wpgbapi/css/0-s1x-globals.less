@@ -1,0 +1,142 @@
+.s1x-picture-bgimage-absolute {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
+
+.s1x-categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+
+  .s1x-category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;
+    background-color: @col2;
+    color: @col_white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+
+    span.highlight {
+      background-color: @col1 !important;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
+
+
+
+.s1x-swiper-controls {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  box-sizing: border-box;
+
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-direction: row;
+
+  margin: 10px auto;
+  width: 100%;
+  padding-top: 20px;
+
+  &:has(> div.swiper-pagination-lock ) {
+    display: none;
+  }
+
+
+  .swiper-pagination {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: unset;
+    position: relative;
+    margin: 0;
+
+    top: unset !important;
+    left: unset !important;
+    bottom: unset !important;
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: @col1;
+      border-radius: 0;
+      padding: 0;
+      position: relative;
+      margin: 0;
+
+      &:before {
+        width: 100%;
+        height: 15px;
+        background-color: transparent;
+        position: absolute;
+        top: unset;
+        left: 0;
+        cursor: pointer;
+        content: '';
+      }
+
+      &.swiper-pagination-bullet-active {
+        height: 5px;
+        margin-bottom: 0;
+        background-color: @col1;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+    margin-top: unset;
+    top: unset !important;
+    right: unset !important;
+    left: unset !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    &:after {
+      content: unset;
+    }
+    img {
+      max-width: 35px;
+      @media @834 {
+        max-width: 50px;
+      }
+      @media @1440 {
+        max-width: 60px;
+      }
+    }
+
+  }
+
+}

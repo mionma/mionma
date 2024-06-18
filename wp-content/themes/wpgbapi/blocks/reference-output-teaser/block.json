@@ -1,0 +1,27 @@
+{
+  "name": "acf/reference-output-teaser",
+  "title": "Reference Output Teaser",
+  "description": "",
+  "style": [],
+  "editorStyle": [],
+  "script": [],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["text"],
+  "apiVersion": 2,
+  "supports": {
+    "jsx": true
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  },
+  "align": "full",
+  "example": {
+    "attributes": {
+      "data": {
+        "is_preview": true
+      }
+    }
+  }
+}

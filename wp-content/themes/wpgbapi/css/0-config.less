@@ -1,0 +1,446 @@
+/* Breakpoints */
+
+@until370: ~"only screen and (max-width: 370px)";
+@380: ~"only screen and (min-width: 380px)";
+@450: ~"only screen and (min-width: 450px)";
+
+@650: ~"only screen and (min-width: 650px)";
+@until650: ~"only screen and (max-width: 650px)";
+@until400: ~"only screen and (max-width: 400px)";
+@834: ~"only screen and (min-width: 834px)";
+@until834: ~"only screen and (max-width: 834px)";
+@from834to1440: ~"only screen and (min-width: 834px) and (max-width: 1440px)";
+@1194: ~"only screen and (min-width: 1194px)";
+@until1194: ~"only screen and (max-width: 1194px)";
+
+@from1194to1920: ~"only screen and (min-width: 1194px) and (max-width: 1920px)";
+
+@1300: ~"only screen and (min-width: 1300px)";
+@until1300: ~"only screen and (max-width: 1300px)";
+@1440: ~"only screen and (min-width: 1440px)";
+
+@from1440to2000: ~"only screen and (min-width: 1440px) and (max-width: 2000px)";
+
+@1600: ~"only screen and (min-width: 1600px)";
+@until1600: ~"only screen and (max-width: 1600px)";
+@1920: ~"only screen and (min-width: 1920px)";
+@2000: ~"only screen and (min-width: 2000px)";
+
+/* Colors */
+
+
+@col_bg: #FFFFFF;
+
+@col_white: #FFFFFF;
+@col_white_95: rgba(255, 255, 255, 0.95);
+@col1: #164863;
+@col1_80: rgba(22, 72, 99, 0.8);
+@col2: #427D9D;
+@col3: #9BBEC8;
+@col4: #DDF2FD;
+@col4_95: rgba(221, 242, 253, 0.95);
+
+
+/* Fonts */
+
+/* merriweather-300 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-300.woff2') format('woff2'); 
+}
+/* merriweather-300italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-300italic.woff2') format('woff2');
+}
+/* merriweather-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-regular.woff2') format('woff2');
+}
+/* merriweather-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-italic.woff2') format('woff2');
+}
+/* merriweather-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-700.woff2') format('woff2');
+}
+/* merriweather-700italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: url('@{fonts_main_folder}/gfont-merriweather/merriweather-v30-latin-700italic.woff2') format('woff2');
+}
+
+
+
+
+
+/* chakra-petch-300 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 300;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-300.woff2') format('woff2'); 
+}
+/* chakra-petch-300italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 300;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-300italic.woff2') format('woff2'); 
+}
+/* chakra-petch-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-regular.woff2') format('woff2'); 
+}
+/* chakra-petch-italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 400;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-italic.woff2') format('woff2'); 
+}
+/* chakra-petch-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 500;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-500.woff2') format('woff2'); 
+}
+/* chakra-petch-500italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 500;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-500italic.woff2') format('woff2'); 
+}
+/* chakra-petch-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 600;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-600.woff2') format('woff2'); 
+}
+/* chakra-petch-600italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 600;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-600italic.woff2') format('woff2'); 
+}
+/* chakra-petch-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-700.woff2') format('woff2'); 
+}
+/* chakra-petch-700italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 700;
+  src: url('@{fonts_main_folder}/gfont-chakra-petch/chakra-petch-v11-latin-700italic.woff2') format('woff2'); 
+}
+
+@font_head: 'Chakra Petch', sans-serif;
+@font_text: 'Merriweather', serif;
+
+
+
+/* Vars */
+@wpbgapi_page_width: 1280px;
+@wpbgapi_page_width_narrow: 750px;
+@wpbgapi_page_beleftsided_width: 600px;
+@wpbgapi_content_padding: 16px;
+
+:root {
+  --wpgbapi-padding: 16px;
+
+  @media @380 {
+
+  }
+
+  @media @834 {
+    --wpgbapi-padding: 24px;
+  }
+
+  @media @1440 {
+    --wpgbapi-padding: 24px;
+  }
+}
+
+
+
+.s1x-padding {
+  padding-left: var(--wpgbapi-padding);
+  padding-right: var(--wpgbapi-padding);
+}
+
+.s1x-constraint {
+  margin: auto;
+  max-width: @wpbgapi_page_width;
+}
+
+.s1x-constraint-narrow {
+  margin: auto;
+  max-width: @wpbgapi_page_width_narrow;
+}
+
+#site-content,
+#more-articles,
+.wp-block-post-content,
+.wp-block-group {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @font_head;
+    color: @col1;
+    margin-top: 40px;
+    margin-bottom: 8px;
+  }
+  h1 {
+    line-height: 100%;
+    font-size: 30px;
+    @media @834 {
+      font-size: 50px;
+    }
+  }
+  h2 {
+    line-height: 120%;
+    font-size: 25px;
+    @media @834 {
+      font-size: 35px;
+    }
+  }
+  h3 {
+    line-height: 120%;
+    font-size: 20px;
+    @media @834 {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    line-height: 150%;
+    color: @col1;
+    font-family: @font_text;
+    font-size: 16px;
+    @media @834 {
+      font-size: 20px;
+    }
+  }
+
+  a {
+    color: @col1;
+    font-weight: 600;
+    text-decoration: none !important;
+    cursor: pointer;
+
+    box-shadow: inset 0 -10px 0 0 @col3;
+    transition: box-shadow .25s ease-in-out;
+
+    border-radius: 0;
+    &:hover {
+      box-shadow: inset 0 -30px rgba(155, 190, 200, .5);
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      margin-bottom: 0;
+      width: 15px;
+      height: 15px;
+      background-image: url('/wp-content/themes/wpgbapi/assets/images/icon-link.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media @834 {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  ol, ul {
+    padding-bottom: 0;
+    padding-left: 30px;
+    li {
+      font-family: @font_text;
+      color: @col1;
+      font-size: 16px;
+      line-height: 150%;
+      padding-bottom: 8px;
+      @media @834 {
+        font-size: 20px;
+      }
+    }
+  }
+  ol {
+    li {
+      &::marker {
+        color: @col1;
+        font-weight: 600;
+      }
+    }
+  }
+  ul {
+    li {
+      &::marker {
+        color: @col1;
+      }
+    }
+  }
+  figure {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .enlighter-default {
+    font-size: 16px;
+  }
+
+}
+
+.wp-block-group {
+  // standardcase is narrow design for blogpost (with most changes)
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @wpbgapi_page_width_narrow;
+  padding-left: var(--wpgbapi-padding);
+  padding-right: var(--wpgbapi-padding);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &.be-wide {
+    max-width: @wpbgapi_page_width;
+  }
+
+  &.be-leftsided {
+    max-width: @wpbgapi_page_width;
+    ol, ul, h1, h2, h3, h4, h5, h6, p {
+      max-width: @wpbgapi_page_beleftsided_width;
+      margin-left: unset !important;
+      margin-right: auto !important;
+    }
+  }
+}
+
+
+.s1x-noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
+.s1x-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  min-width: 250px;
+  padding: 13px 20px 13px 32px;
+
+  text-decoration: unset !important;
+  text-transform: uppercase;
+  border-radius: 50px;
+
+  font-family: @font_head;
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  &.btn-black {
+    border: 1px solid #000;
+    background-color: #000;
+    color: white;
+    &:hover {
+      background-color: unset;
+      color: #000;
+    }
+  }
+
+}
+
+
+
+
+/* plugin rank math tab le of content definition */
+.wp-block-rank-math-toc-block,
+#rank-math-toc {
+  ol {
+    padding: 0;
+    li {
+      margin-top: 5px;
+      padding-bottom: 3px;
+      &:before {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    li {
+      margin-top: 5px;
+      padding-bottom: 3px;
+      &:before {
+        margin-right: 10px;
+      }
+
+    }
+  }
+
+  a {
+    &:after {
+      margin-top: 0;
+      width: 14px;
+      height: 14px;
+      transform: rotate(90deg);
+    }
+  }
+
+}
+

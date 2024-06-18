@@ -1,0 +1,140 @@
+section.block-faq-output-full {
+  padding: 0;
+
+  .block-inner {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .cntnr-input {
+      width: 100%;
+      max-width: 400px;
+      order: 2;
+      position: relative;
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        border-radius: 100px;
+        border: unset;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: @col1;
+        outline: 2px solid @col2;
+        &:active,
+        &:focus {
+          outline: 2px solid @col1;
+        }
+      }
+
+      .searchicon {
+        position: absolute;
+        right: 13px;
+        top: 8px;
+        max-width: 20px;
+      }
+
+    }
+
+
+    .faq-grid {
+
+      .faq-item {
+
+        margin-top: var(--wpgbapi-padding);
+        padding-top: var(--wpgbapi-padding);
+        border-top: 1px solid @col3;
+        padding-bottom: 16px;
+        &:nth-last-child(1) {
+          border-bottom: 1px solid @col3;
+        }
+
+        span.highlight {
+          background-color: @col4;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+        &.no-faq-found {
+          .header {
+            cursor: unset;
+          }
+        }
+
+        &.active {
+          .header {
+            .buttons {
+              .controlbtn {
+                &.open {
+                  display: none;
+                }
+                &.close {
+                  display: flex;
+                }
+              }
+            }
+          }
+          .text {
+            display: block;
+          }
+        }
+
+        .s1x-categories {
+          margin-bottom: 10px;
+        }
+
+        .header {
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 20px;
+
+          h3.headline {
+            margin: 0 !important;
+          }
+          .buttons {
+            padding-top: 3px;
+            display: flex;
+            justify-content: flex-end;
+            .controlbtn {
+              background-color: @col4;
+              border: 1px solid @col1;
+              font-family: @font_text;
+              color: @col1;
+              width: 25px;
+              height: 25px;
+              justify-content: center;
+              align-items: center;
+              font-size: 25px;
+              line-height: 21px;
+              font-weight: 600;
+              &.open {
+                display: flex;
+              }
+              &.close {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .text {
+          position: relative;
+          display: none;
+
+          p {
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
