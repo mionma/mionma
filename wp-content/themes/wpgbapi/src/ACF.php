@@ -65,6 +65,7 @@ class ACF
                 'acf/service-output-full',
 
                 'erecht24/erecht24',
+                'rank-math/toc-block',
 
                 'core/shortcode',
                 'core/group',

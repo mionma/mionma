@@ -432,10 +432,6 @@
 #rank-math-toc ol li:before {
   margin-right: 10px;
 }
-.wp-block-rank-math-toc-block ul,
-#rank-math-toc ul {
-  padding: 0;
-}
 .wp-block-rank-math-toc-block ul li,
 #rank-math-toc ul li {
   margin-top: 5px;
@@ -719,6 +715,30 @@ section.block-header .contain-narrow .contain-text .inner {
   margin-left: auto;
   --container-width: 750px;
 }
+section.block-header .video.fileembed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+section.block-header .video.fileembed video {
+  z-index: 1;
+  width: 105vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 189.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.block-header .video.fileembed video::-webkit-media-controls {
+  display: none !important;
+}
 section.block-header .contain-text {
   position: relative;
   z-index: 2;
@@ -731,6 +751,12 @@ section.block-header .contain-text .inner {
   background-color: rgba(255, 255, 255, 0.95);
   max-width: var(--container-width);
   padding: var(--wpgbapi-padding);
+}
+section.block-header .contain-text .inner.video {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+section.block-header .contain-text .inner.video:before {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 section.block-header .contain-text .inner:before {
   content: '';
