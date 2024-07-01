@@ -70,6 +70,7 @@ class ACF
                 'rank-math/toc-block',
 
                 'core/shortcode',
+                'core/image',
                 'core/group',
                 'core/paragraph',
                 'core/heading',
