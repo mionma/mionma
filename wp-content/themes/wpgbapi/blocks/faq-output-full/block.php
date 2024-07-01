@@ -32,7 +32,7 @@
             </h2>
 
 
-            <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-grid">
 
             <?php
             // get published faq posts
@@ -49,7 +49,7 @@
 
             foreach ($posts as $post) : ?>
 
-                <div class="faq-item s1x-noselect" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item s1x-noselect">
 
                     <div class="s1x-categories">
                         <?php $t = get_the_terms($post->ID, 'cpt-faq-category'); ?>
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="header">
-                        <h3 class="headline" itemprop="name">
+                        <h3 class="headline">
                             <?php echo get_the_title($post->ID); ?>
                         </h3>
 
@@ -84,11 +84,9 @@
 
                     </div>
 
-                    <div class="text" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <span itemprop="text">
-                            <?php $the_content = apply_filters('the_content', $post->post_content); ?>
-                            <?php echo $the_content; ?>
-                        </span>
+                    <div class="text">
+                        <?php $the_content = apply_filters('the_content', $post->post_content); ?>
+                        <?php echo $the_content; ?>
                     </div>
 
                 </div>

@@ -57,7 +57,8 @@
                     <picture class="s1x-picture-bgimage-absolute">
                         <?php if( $image = get_field('postobject_headimage', $post->ID ) ) : ?>
                             <?php echo \WPGBAPI\Base_Theme_Support::get_imagify_webp_picture_source( $image['url'] ); ?>
-                            <img width="<?php echo $image['width']; ?>"
+                            <img loading="lazy"
+                                 width="<?php echo $image['width']; ?>"
                                  height="<?php echo $image['height']; ?>"
                                  src="<?php echo $image['url']; ?>"
                                  alt="<?php echo $image['alt']; ?>">

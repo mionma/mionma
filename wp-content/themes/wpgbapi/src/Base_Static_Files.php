@@ -23,6 +23,7 @@ class Base_Static_Files
         }
 
         /* difference between admin and frontend */
+        wp_register_script( 'block-faq-output-accordion' . $suffix, _THEME_URI . '/blocks/faq-output-accordion/script' . $suffix . '.js', array( 'jquery', 'acf' ), _THEME_VERSION, true );
         wp_register_script( 'block-faq-output-full' . $suffix, _THEME_URI . '/blocks/faq-output-full/script' . $suffix . '.js', array( 'jquery', 'acf' ), _THEME_VERSION, true );
         wp_register_script( 'block-image-showcase-grid' . $suffix, _THEME_URI . '/blocks/image-showcase-grid/script' . $suffix . '.js', array( 'jquery', 'acf', 'swiper' ), _THEME_VERSION, true );
     }

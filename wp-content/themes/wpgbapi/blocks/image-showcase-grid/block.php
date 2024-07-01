@@ -15,10 +15,11 @@
 
                         <div class="swiper-slide">
 
-                            <picture class="s1x-picture-bgimage-absolute" loading="lazy">
+                            <picture class="s1x-picture-bgimage-absolute">
                                 <?php if( $value['image']['url'] ) : ?>
                                     <?php echo \WPGBAPI\Base_Theme_Support::get_imagify_webp_picture_source( $value['image']['url'] ); ?>
-                                    <img width="<?php echo $value['image']['width']; ?>"
+                                    <img loading="lazy"
+                                         width="<?php echo $value['image']['width']; ?>"
                                          height="<?php echo $value['image']['height']; ?>"
                                          src="<?php echo $value['image']['url']; ?>"
                                          alt="<?php echo $value['image']['alt']; ?>">
@@ -30,10 +31,11 @@
                                     <?php echo $key + 1 . ') ' . $value['title']; ?>
                                 </p>
 
-                                <picture loading="lazy">
+                                <picture>
                                     <?php if( $value['image']['url'] ) : ?>
                                         <?php echo \WPGBAPI\Base_Theme_Support::get_imagify_webp_picture_source( $value['image']['url'] ); ?>
-                                        <img width="<?php echo $value['image']['width']; ?>"
+                                        <img loading="lazy"
+                                             width="<?php echo $value['image']['width']; ?>"
                                              height="<?php echo $value['image']['height']; ?>"
                                              src="<?php echo $value['image']['url']; ?>"
                                              alt="<?php echo $value['image']['alt']; ?>">

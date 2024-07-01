@@ -31,6 +31,7 @@ class ACF
 
 
     public function register_acf_blocks() {
+        register_block_type( _THEME_PATH . '/blocks/faq-output-accordion' );
         register_block_type( _THEME_PATH . '/blocks/faq-output-full' );
         register_block_type( _THEME_PATH . '/blocks/header' );
         register_block_type( _THEME_PATH . '/blocks/image-showcase-grid' );
@@ -54,6 +55,7 @@ class ACF
                 'core/list-item', */
 
 
+                'acf/faq-output-accordion',
                 'acf/faq-output-full',
                 'acf/header',
                 'acf/image-showcase-grid',
@@ -82,6 +84,7 @@ class ACF
             'cpt-services' === $editor_context->post->post_type) {
 
             return array(
+                'acf/faq-output-accordion',
                 'acf/header',
                 'acf/image-showcase-grid',
                 'core/group',

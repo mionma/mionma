@@ -347,8 +347,28 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   &.be-wide {
     max-width: @wpbgapi_page_width;
+  }
+
+  &.be-twocolumned {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: @wpbgapi_page_width;
+    ol, ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: grid;
+      grid-gap: var(--wpgbapi-padding) 80px;
+      grid-template-columns: 1fr;
+      @media @834 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
 
   &.be-leftsided {

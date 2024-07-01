@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! defined( '_THEME_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_THEME_VERSION', '1.0.5' );
+	define( '_THEME_VERSION', '1.0.7' );
 }
 
 if ( ! defined( '_THEME_PATH' ) ) {

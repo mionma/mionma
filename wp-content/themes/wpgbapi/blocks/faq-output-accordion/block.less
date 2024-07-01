@@ -1,66 +1,22 @@
-section.block-faq-output-full {
+section.block-faq-output-accordion {
   padding: 0;
 
   .block-inner {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    .cntnr-input {
-      width: 100%;
-      max-width: 400px;
-      order: 2;
-      position: relative;
-      input {
-        box-sizing: border-box;
-        width: 100%;
-        margin: 0;
-        padding: 10px 20px;
-        border-radius: 100px;
-        border: unset;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: @col1;
-        outline: 2px solid @col2;
-        &:active,
-        &:focus {
-          outline: 2px solid @col1;
-        }
-      }
-
-      .searchicon {
-        position: absolute;
-        right: 13px;
-        top: 8px;
-        max-width: 20px;
-      }
-
-    }
-
 
     .faq-grid {
 
+      max-width: @wpbgapi_page_beleftsided_width;
+      margin-left: unset !important;
+      margin-right: auto !important;
+
       .faq-item {
 
-        margin-top: var(--wpgbapi-padding);
         padding-top: var(--wpgbapi-padding);
         border-top: 1px solid @col3;
-        padding-bottom: 16px;
-        &:nth-last-child(1) {
-          border-bottom: 1px solid @col3;
-        }
-
-        span.highlight {
-          background-color: @col4;
-        }
-
-        &.hidden {
-          display: none;
-        }
-
-        &.no-faq-found {
-          .header {
-            cursor: unset;
-          }
+        padding-bottom: var(--wpgbapi-padding);
+        &:nth-child(1) {
+          padding-top: unset;
+          border-top: unset;
         }
 
         &.active {
@@ -81,10 +37,6 @@ section.block-faq-output-full {
           }
         }
 
-        .s1x-categories {
-          margin-bottom: 10px;
-        }
-
         .header {
           cursor: pointer;
           display: flex;
@@ -93,9 +45,11 @@ section.block-faq-output-full {
           justify-content: space-between;
           gap: 20px;
 
-          h3.headline {
+          p.headline {
             margin: 0 !important;
+            font-weight: bold;
           }
+
           .buttons {
             padding-top: 3px;
             display: flex;
