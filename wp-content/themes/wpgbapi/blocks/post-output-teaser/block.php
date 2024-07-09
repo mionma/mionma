@@ -13,7 +13,7 @@
             // get published faq posts
             $args = array(
                 'post_type'   => 'post',
-                'numberposts' =>  4,
+                'numberposts' =>  -1,
                 'orderby'     => 'post_date',
                 'order'       => 'DESC',
                 'post_status' => 'publish',
@@ -33,14 +33,17 @@
                     $get_offset = 1;
                 }
             }
-            // get next 4 posts
-            $tmp_posts = array_splice($posts, $current_post_array_index + $get_offset, 2);
+            // get next 3 posts
+            $tmp_posts = array_splice($posts, $current_post_array_index + $get_offset, 3);
             // if array ended before 4 posts
-            if (count($tmp_posts) < 2) {
+            if (count($tmp_posts) < 3) {
                 if (count($tmp_posts) == 0) {
-                    $length = 2;
+                    $length = 3;
                 }
                 if (count($tmp_posts) == 1) {
+                    $length = 2;
+                }
+                if (count($tmp_posts) == 2) {
                     $length = 1;
                 }
                 // get posts from array start
