@@ -18,6 +18,7 @@ class Base_Theme_Support
         add_action( 'customize_register', array( $this, 'disable_custom_css' ) );
         // add_filter( 'wpcf7_autop_or_not', '__return_false');
         add_filter( 'the_content_more_link' , array( $this, 'remove_more_link_scroll') );
+        add_action( 'template_redirect', array( $this, 'disable_wp_author_page_and_rd404' ) );
         add_filter( 'rank_math/table_of_contents/heading_tags', array( $this, 'rankmath_add_custom_headings_to_toc' ) );
 
         remove_action( 'enqueue_block_editor_assets', 'wp_enqueue_editor_block_directory_assets' );
@@ -86,6 +87,20 @@ class Base_Theme_Support
     public function remove_more_link_scroll( $link ) {
         $link = preg_replace( '|#more-[0-9]+|', '', $link );
         return $link;
+    }
+
+
+    /**
+     * Disable wordpress author pages and redirect to 404 page
+     */
+    function disable_wp_author_page_and_rd404() {
+        global $wp_query;
+
+        if ( is_author() ) {
+            // Redirect to 404 error page
+            $wp_query->set_404();
+            status_header(404);
+        }
     }
 
 
